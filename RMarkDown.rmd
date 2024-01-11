@@ -16,3 +16,38 @@ In this case I do not:
 ```{r, eval=F}
 2 + 3
 ```
+
+Using proper packages:
+ImageRy package has been built at Alma Mater for learning remote sensing
+```{r, eval=F}
+library(imageRy)
+```
+Let's import some data, starting with a list of data:
+```{r, eval=T}
+library(imageRy)
+im.list()
+```
+Import the Matogrosso area image:
+```{r, eval=T, warning=F}
+mato1992 <- im.import("matogrosso_l5_1992219_lrg.jpg")
+```
+Making a new plot of mato1992 with NIR on top of the green component of the RGB space: 
+```{r, eval=T}
+im.plotRGB(mato1992, r=2, g=1, b=3)
+```
+Plotting several images all together: 
+```{r, eval=T}
+par(mfrow=c(2,2))
+im.plotRGB(mato1992, r=2, g=1, b=3)
+im.plotRGB(mato1992, r=2, g=2, b=3)
+im.plotRGB(mato1992, r=3, g=2, b=1)
+im.plotRGB(mato1992, r=1, g=3, b=1)
+```
+Calculating spectral indices:
+```{r, eval=T}
+dvi <- mato1992[[1]] - mato1992[[2]]
+dvi
+```
+
+
+
