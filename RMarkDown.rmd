@@ -48,6 +48,19 @@ Calculating spectral indices:
 dvi <- mato1992[[1]] - mato1992[[2]]
 dvi
 ```
+Calculating spectral indices:
+```{r, eval=T}
+library(terra)
+library(viridis)
+dvi <- mato1992[[1]] - mato1992[[2]]
+viridisc <- colorRampPalette(viridis(7))(255)
+plot(dvi, col=viridisc)
+ ```
+Calculating variability:
+```{r, eval=T}
+sd5 <- focal(mato1992[[1]], matrix(1/25,5,5), fun=sd)
+plot(sd5, col=viridisc)
+```
 
 
 
