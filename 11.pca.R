@@ -1,0 +1,39 @@
+#We'll perform the PCA and use PC1 to calculate sd 
+
+library(imageRy)
+library(terra)
+library(viridis)
+im.list()
+
+sent <- im.import("sentinel.png")
+
+#Perform PCA on sent: 
+pairs(sent)
+sentpc <- im.pca2(sent)
+sentpc
+pc1 <- sentpc$PC1
+plot(pc1)
+viridisc <- colorRampPalette(viridis(7))(255)
+plot(pc1, col=viridisc)
+
+#Calculating sd on top of pc1:
+pc1sd3 <- focal(pc1, matrix(1/9, 3,3), fun=sd)
+plot(pc1sd3, col=viridisc)
+pc1sd7 <- focal(pc1, matrix(1/49, 7,7), fun=sd)
+plot(pc1sd7, col=viridisc)
+
+par(mfrow=c(2,3))
+im.plotRGB(sent, 2, 1, 3)
+
+#Sd from the variability script:
+plot(sd3, col=viridisc) 
+plot(sd7, col=viridisc) 
+plot(pc1, col=viridisc)
+plot(pc1sd3, col=viridisc)
+plot(pc1sd7, col=viridisc)
+
+#Stack all the standard deviation layers: 
+sdstack <- c(sd3, sd7, pc1sd3, pc1sd7)
+plot(sdstack, col=viridisc)
+names(sdstack) <- c("sd3", "sd7", "pc1sd3", "pc1sd7")
+plot(sdstack, col=viridisc)
