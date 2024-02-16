@@ -1,4 +1,4 @@
-##CODE RELATED TO POPULATION ECOLOGY
+##Code related to population ecology
 
 #A package is needed for point pattern analysis
 install.packages("spatstat") #putting external data inside R
