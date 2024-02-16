@@ -52,7 +52,7 @@ plot(density_map)
 plot(bei)
 #created a new mf with 3 variables 
 
-#To CHANGE THE COLORS of the graph
+#To change the colors of the graph
 c1 <- colorRampPalette(c("black", "red", "orange","yellow"))(100)
 #the 100 are the number of color's shades that will appear in the graph  
 plot(bei.extra[[1]], col=c1) #Changed the colors of the graph
