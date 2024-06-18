@@ -1,0 +1,204 @@
+\documentclass{beamer}
+\usepackage{graphicx} % Required for inserting images
+
+\usetheme{Frankfurt}
+\usecolortheme{beaver}
+
+\title{Spatial Ecology in R}
+\author{Elsa Frabetti}
+\institute{Global change ecology - Unibo}
+\date{June 2024}
+
+
+\begin{document}
+
+\maketitle
+\AtBeginSection[]
+{
+\begin{frame}{Outline}
+\tableofcontents[currentsection]
+\end{frame}
+} % ad ogni sezione nuova mi fa vedere l'outline
+
+
+\section{Materials and methods}
+
+\section{Studied area}
+
+\section{Data analysis}
+
+\begin{frame}{Comparison July - August 2021}
+
+\centering
+Let's see the difference before and after the fire with true and false color images. 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{1plot.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Spectral indices}
+\centering %per centrare il testo
+Through false color images we can calculate spectral indices for vegetation.
+\bigskip %per lasciare più spazio
+\bigskip
+\begin{columns}
+    \begin{column}[t]{0.55\textwidth}
+    \centering
+    \textbf{DVI}\\ \small Difference Vegetation Index
+    \begin{equation*}
+        DVI = NIR - RED
+    \end{equation*}
+    \end{column}
+
+    \begin{column}[t]{0.6\textwidth}
+    \centering
+    \textbf{NDVI}\\ \small Normalized Difference Vegetation Index
+    \begin{equation*}
+        NDVI = \frac{NIR - RED}{NIR + RED}
+    \end{equation*}
+    \end{column}   
+\end{columns}    
+\end{frame}
+
+\begin{frame}{NDVI}
+\centering
+Let's see NDVI's comparison before and after fire\\
+(July - August 2021)
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{2plot (2).png}
+\end{figure}   
+\end{frame}
+
+\begin{frame}{Classification}
+\begin{columns}
+    \begin{column}{0.65\textwidth}
+    \begin{figure}
+           \centering
+           \includegraphics[width=1\linewidth]{3plot.png}
+       \end{figure}   
+    \end{column}
+
+    \begin{column}{0.5\textwidth}
+       Classification based on NDVI values before and after fire. 
+    \end{column}
+\end{columns}    
+\end{frame}
+
+\begin{frame}{Classification}
+\begin{columns}
+    \begin{column}{0.65\textwidth}
+    \begin{figure}
+           \centering
+           \includegraphics[width=1\linewidth]{3plot.png}
+       \end{figure}   
+    \end{column}
+
+    \begin{column}{0.5\textwidth}
+    \textbf{July 2021}:
+        \begin{itemize}
+            \item Vegetation = 51 \%
+            \item Bare soil = 49 \%
+        \end{itemize}
+        \bigskip
+        \bigskip
+        \bigskip
+        \textbf{August 2021}:
+        \begin{itemize}
+            \item Vegetation = 35 \%
+            \item Bare soil = 65 \%
+        \end{itemize}
+    \end{column}
+\end{columns}    
+\end{frame}
+
+\begin{frame}{Classification}
+\centering
+Let's visualize graphically the classes' percentages before and after fire. 
+\begin{columns}
+    \begin{column}{0.65\textwidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\linewidth]{4plot.png} 
+    \end{figure}
+    \end{column}
+
+    \begin{column}{0.5\textwidth}
+        We can see a clear vegetation reduction after the fire. 
+    \end{column}
+\end{columns}     
+\end{frame}
+
+\begin{frame}{Spectral variability}
+\centering
+\textbf{PCA} on NIR, R and G bands.\\
+\textbf{Moving window} (MW) of different sizes on \textbf{PC1}.
+\begin{figure}
+      \centering
+      \includegraphics[width=0.7\linewidth]{5plot.png}
+  \end{figure}      
+\end{frame}
+
+\begin{frame}{Spectral variability}
+\centering
+We can see that the fire reduced the habitat heterogeneity,\\ with a likely consequent decrease of biodiversity.  
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\linewidth]{5plot.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Recovery}
+\centering
+Let's compare the area status before fire with the actual situation (August 2023). 
+\begin{figure}
+       \centering
+       \includegraphics[width=0.8\linewidth]{6plot.png}
+   \end{figure}   
+\end{frame}
+
+\begin{frame}{Recovery}
+\centering
+Let's do another comparison by calculating NDVI differences between August 2021 and August 2023.
+\begin{figure}
+     \centering
+     \includegraphics[width=0.9\linewidth]{7plot.png}
+ \end{figure} 
+\end{frame}
+
+\begin{frame}{Recovery}
+\centering
+We can clearly see that two years after the fire\\ secondary succession is restoring the environment.
+\begin{figure}
+     \centering
+     \includegraphics[width=0.9\linewidth]{7plot.png}
+ \end{figure} 
+\end{frame}
+
+%mettera posto la scala del grafico a sinistra
+
+\section{Conclusion}
+
+\begin{frame}{Resume}
+\begin{itemize}
+    \item Grandi differenze di \textbf{NDVI} tra stagione delle piogge e non.
+    \bigskip
+    \pause \item La classificazione evidenzia una \textbf{riduzione della vegetazione} del \textbf{85\%} tra marzo e settembre.
+    \bigskip
+    \pause \item L'aumento della vegetazione a marzo è \textbf{diffuso} su tutto il territorio.
+    \bigskip
+    \pause \item Settembre risulta avere un ambiente \textit{leggermente più eterogeneo}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The End}
+\centering
+\large \textbf{Grazie dell'attenzione!}
+\end{frame}
+
+
+
+
+
+\end{document}
