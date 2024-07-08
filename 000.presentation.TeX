@@ -21,11 +21,80 @@
 } % ad ogni sezione nuova mi fa vedere l'outline
 
 
-\section{Materials and methods}
+\section{Materials and methods} % 1st section
 
-\section{Studied area}
+\begin{frame}{Images}
+    Images downloaded from \textbf{\href{https://browser.dataspace.copernicus.eu}{Copernicus Browser}}:
+    \bigskip
+    \begin{itemize}
+        \item Searched for the study area.
+        \item  Cloud cover lower than 5 \%.
+        \item Downloaded images True Color and False Color.
+        \item Images' format .jpg high resolution.
+    \end{itemize}
+\end{frame}
 
-\section{Data analysis}
+\begin{frame}{Packages} 
+    For my script I used the following packages:
+    \bigskip % to leave space
+    \begin{itemize} % bulleted list
+        \item terra
+        \item imageRy
+        \item viridis
+        \item ggplot2
+        \item patchwork
+        \end{itemize}
+\end{frame}
+
+
+\section{Studied area} % 2nd section
+
+\begin{frame}{Where?}
+We are in Sardinia, in the area of Montiferru, province of Oristano.
+\bigskip
+\begin{columns}
+
+    \begin{column}{0.5\textwidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\linewidth]{screen sardegna small.png}
+        \caption{Province of Scano di Montiferro, OR}
+    \end{figure}
+    \end{column}
+    
+    \begin{column}{0.5\textwidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\linewidth]{screen sardegna big.png}
+        \caption{Sardinia region}
+    \end{figure}
+    \end{column}
+    
+\end{columns}
+\end{frame}
+
+\begin{frame}{What happened?}
+During July 2021, a massive wildfire destroyed the area of Montiferru, burning almost 13.000 hectares of land, of which 4.000 were woods.\\It seems that the fire was caused accidentally, because a car caught fire on the road, but it turned out to be the worst wildfire happened in Sardinia in the past 24 years. 
+
+\begin{columns}
+    \begin{column}{0.5\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.8\linewidth]{pre-incendio tc.jpg}
+        \end{figure}
+    \end{column}
+
+    \begin{column}{0.5\textwidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth]{post-incendio tc.jpg}
+    \end{figure}
+    \end{column}
+\end{columns}
+\end{frame}
+
+
+\section{Data analysis} % 3rd section
 
 \begin{frame}{Comparison July - August 2021}
 
@@ -178,7 +247,7 @@ We can clearly see that two years after the fire\\ secondary succession is resto
 
 %mettera posto la scala del grafico a sinistra
 
-\section{Conclusion}
+\section{Conclusion} % 4th section
 
 \begin{frame}{Resume}
 \begin{itemize}
