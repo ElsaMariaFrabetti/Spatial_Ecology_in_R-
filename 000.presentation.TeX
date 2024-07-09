@@ -1,8 +1,8 @@
-\documentclass{beamer}
+\documentclass{beamer} % class for presentation
 \usepackage{graphicx} % Required for inserting images
 
-\usetheme{Frankfurt}
-\usecolortheme{beaver}
+\usetheme{Frankfurt} % presentaion style
+\usecolortheme{beaver} % color
 
 \title{Spatial Ecology in R}
 \author{Elsa Frabetti}
@@ -12,25 +12,25 @@
 
 \begin{document}
 
-\maketitle
+\maketitle % it writes down the things we insert before begin
 \AtBeginSection[]
 {
 \begin{frame}{Outline}
 \tableofcontents[currentsection]
 \end{frame}
-} % ad ogni sezione nuova mi fa vedere l'outline
+} % it shows me the outline for every new section
 
 
 \section{Materials and methods} % 1st section
 
-\begin{frame}{Images}
+\begin{frame}{Images} % title
     Images downloaded from \textbf{\href{https://browser.dataspace.copernicus.eu}{Copernicus Browser}}:
     \bigskip
     \begin{itemize}
         \item Searched for the study area.
         \item  Cloud cover lower than 5 \%.
         \item Downloaded images True Color and False Color.
-        \item Images' format .jpg high resolution.
+        \item Images format .jpg high resolution.
     \end{itemize}
 \end{frame}
 
@@ -47,14 +47,15 @@
 \end{frame}
 
 
+
 \section{Studied area} % 2nd section
 
 \begin{frame}{Where?}
 We are in Sardinia, in the area of Montiferru, province of Oristano.
 \bigskip
-\begin{columns}
+\begin{columns} % making many columns
 
-    \begin{column}{0.5\textwidth}
+    \begin{column}{0.5\textwidth} % first column
     \begin{figure}
         \centering
         \includegraphics[width=1\linewidth]{screen sardegna small.png}
@@ -94,6 +95,7 @@ During July 2021, a massive wildfire destroyed the area of Montiferru, burning a
 \end{frame}
 
 
+
 \section{Data analysis} % 3rd section
 
 \begin{frame}{Comparison July - August 2021}
@@ -107,9 +109,9 @@ Let's see the difference before and after the fire with true and false color ima
 \end{frame}
 
 \begin{frame}{Spectral indices}
-\centering %per centrare il testo
+\centering % centering the text
 Through false color images we can calculate spectral indices for vegetation.
-\bigskip %per lasciare più spazio
+\bigskip % leaving more space
 \bigskip
 \begin{columns}
     \begin{column}[t]{0.55\textwidth}
@@ -245,28 +247,25 @@ We can clearly see that two years after the fire\\ secondary succession is resto
  \end{figure} 
 \end{frame}
 
-%mettera posto la scala del grafico a sinistra
 
 \section{Conclusion} % 4th section
 
 \begin{frame}{Resume}
 \begin{itemize}
-    \item Grandi differenze di \textbf{NDVI} tra stagione delle piogge e non.
+    \item Clear vegetation reduction after the fire.
     \bigskip
-    \pause \item La classificazione evidenzia una \textbf{riduzione della vegetazione} del \textbf{85\%} tra marzo e settembre.
+    \pause \item From July to August 2021, we are witnessing a vegetation loss of the 16\%. 
     \bigskip
-    \pause \item L'aumento della vegetazione a marzo è \textbf{diffuso} su tutto il territorio.
+    \pause \item After the fire, the habitat resulted to be less heterogeneous with also a decreased biodiversity. 
     \bigskip
-    \pause \item Settembre risulta avere un ambiente \textit{leggermente più eterogeneo}.
+    \pause \item Looking at the environment status two years after the fire, NDVI differences tell us that secondary succession is restoring the area.
 \end{itemize}
 \end{frame}
 
 \begin{frame}{The End}
 \centering
-\large \textbf{Grazie dell'attenzione!}
+\large \textbf{Thanks for the attention!}
 \end{frame}
-
-
 
 
 
