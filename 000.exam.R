@@ -142,7 +142,7 @@ glu21 + gag21 # first we created the two graphs then we merge them
 # SD is calculated on 1 variable 
 # So we analyze the principal components to find PC1
 # In this was we can choose the most informative variable
-# For pca we choose 4 bands: NIR, R, G and B 
+# For pca we choose 3 bands: NIR, R and G  
 
 # July 2021
 pairs(fcluglio21) #the correlation between bands is pretty low
