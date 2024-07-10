@@ -64,7 +64,8 @@ dviAF = fcagosto21[[1]] - fcagosto21[[2]] # after fire
 # This is a normalized index that doesn't depend on the images resolution 
 # Values range goes from -1 to 1 
 
-# NDVI
+# NDVI - Normalized Difference Vegetation Index 
+# We use it because it doesn't depend on the image resolution
 
 ndviBF = dviBF/(fcluglio21[[1]] + fcluglio21[[2]]) # before fire
 ndviAF = dviAF/(fcagosto21[[1]] + fcagosto21[[2]]) # after fire
@@ -79,7 +80,7 @@ dev.off()
 ## Classification
 
 # Classifying on NDVI because we want to analyze vegetation
-# We have to tell the nu,ber of classes 
+# We have to tell the number of classes 
 # The initial sampling is random, so we can see slightly different results if web repeat the process more than once
 
 suppressWarnings({
@@ -145,7 +146,7 @@ glu21 + gag21 # first we created the two graphs then we merge them
 # For pca we choose 3 bands: NIR, R and G  
 
 # July 2021
-pairs(fcluglio21) #the correlation between bands is pretty low
+pairs(fcluglio21) # the correlation between bands is pretty low
 pclu21 <- im.pca2(fcluglio21)
 # PC1 = 44.2, PC2 = 26.2, PC3 = 4.3
 
@@ -189,7 +190,7 @@ plot(stack, col=viridis(100))
 
 ## Let's compare 2021 with 2023
 
-par(mfrow=c(1,2)) #compare tc images
+par(mfrow=c(1,2)) # compare tc images
 plot(luglio21, main="July 2021") 
 plot(agosto23, main="August 2023")
 
@@ -207,8 +208,8 @@ par(mfrow=c(1,2))
 plot(dif21, col=coldif, main="Right after the fire")
 plot(dif23, col=coldif, main="Two years after the fire")
 
-# We have a graudal increase in vegetation without big peaks 
-# Secondary succession results in a uniform diffusion in the area
+# We witness a graudal restoration of the area without big peaks 
+# Uniform diffusion resulted from secondary succession
 
 
 
